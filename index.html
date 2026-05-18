@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Completion-Sense Benchmark</title>
+    <meta
+      name="description"
+      content="NASim 관측을 텍스트로 변환하고 의미 임베딩으로 completion-sense reward curve를 평가하는 연구 프로젝트."
+    >
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Completion-Sense Benchmark 홈">
+        <span class="brand-mark" aria-hidden="true">CS</span>
+        <span>Completion-Sense</span>
+      </a>
+      <nav class="site-nav" aria-label="주요 섹션">
+        <a href="#method">Method</a>
+        <a href="#results">Results</a>
+        <a href="#run">Run</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">Semantic reward curve for NASim paths</p>
+          <h1 id="hero-title">
+            <span>Completion</span>
+            <span>Sense</span>
+            <span>Benchmark</span>
+          </h1>
+          <p class="hero-text">
+            네트워크 공격 시뮬레이션의 관측 기록을 자연어로 풀어내고, 의미 공간에서 목표 완료감이 어떻게 쌓이는지 측정합니다.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#run">실행하기</a>
+            <a class="button secondary" href="#method">방법 보기</a>
+          </div>
+        </div>
+
+        <figure class="visual-panel" aria-label="관측 경로와 보상 곡선 시각화">
+          <canvas id="pathCanvas" width="920" height="640"></canvas>
+          <figcaption>
+            <strong>Observation path</strong>
+            <span>semantic distance narrows as completion grows</span>
+          </figcaption>
+        </figure>
+      </section>
+
+      <section class="metrics" aria-label="프로젝트 요약 지표">
+        <div>
+          <strong>NASim</strong>
+          <span>optimal-path observations</span>
+        </div>
+        <div>
+          <strong>Text</strong>
+          <span>state-to-language encoding</span>
+        </div>
+        <div>
+          <strong>Curve</strong>
+          <span>completion-sense reward</span>
+        </div>
+      </section>
+
+      <section class="content-band" id="method">
+        <div class="section-heading">
+          <p class="eyebrow">Method</p>
+          <h2>관측을 의미로 바꾸는 간단한 파이프라인</h2>
+        </div>
+        <div class="method-grid">
+          <article>
+            <span>01</span>
+            <h3>Observe</h3>
+            <p>NASim 경로의 상태 변화를 읽고, 각 단계에서 드러나는 호스트와 권한 정보를 정리합니다.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Describe</h3>
+            <p>구조화된 관측값을 사람이 읽을 수 있는 문장으로 변환해 의미 인코더가 다룰 수 있게 만듭니다.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Evaluate</h3>
+            <p>목표 문장과의 의미적 가까움을 따라 reward curve를 만들고 완료감의 증가를 추적합니다.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="split-section" id="results">
+        <div>
+          <p class="eyebrow">Results</p>
+          <h2>완료에 가까워지는 느낌을 숫자로 확인합니다</h2>
+          <p>
+            이 벤치마크는 경로가 목표 상태에 가까워질수록 의미 보상이 어떻게 변하는지 확인하는 데 초점을 둡니다.
+            실험 출력은 <code>logs/</code>에 저장되며, 이후 곡선 비교나 모델별 감도 분석으로 확장할 수 있습니다.
+          </p>
+        </div>
+        <div class="curve-card" aria-label="보상 곡선 예시">
+          <div class="curve-row">
+            <span>start</span>
+            <meter min="0" max="100" value="22">22%</meter>
+          </div>
+          <div class="curve-row">
+            <span>pivot</span>
+            <meter min="0" max="100" value="58">58%</meter>
+          </div>
+          <div class="curve-row">
+            <span>goal</span>
+            <meter min="0" max="100" value="91">91%</meter>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-band run-band" id="run">
+        <div class="section-heading">
+          <p class="eyebrow">Run</p>
+          <h2>로컬에서 벤치마크 실행</h2>
+        </div>
+        <pre><code>python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+python3 scripts/completion_sense_benchmark.py</code></pre>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>minseo.github.io</span>
+      <a href="#top">Back to top</a>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
