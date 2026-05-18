@@ -1,136 +1,126 @@
 <!doctype html>
 <html lang="ko">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Completion-Sense Benchmark</title>
-    <meta
-      name="description"
-      content="NASim 관측을 텍스트로 변환하고 의미 임베딩으로 completion-sense reward curve를 평가하는 연구 프로젝트."
-    >
-    <link rel="stylesheet" href="styles.css">
-  </head>
-  <body>
-    <header class="site-header">
-      <a class="brand" href="#top" aria-label="Completion-Sense Benchmark 홈">
-        <span class="brand-mark" aria-hidden="true">CS</span>
-        <span>Completion-Sense</span>
-      </a>
-      <nav class="site-nav" aria-label="주요 섹션">
-        <a href="#method">Method</a>
-        <a href="#results">Results</a>
-        <a href="#run">Run</a>
-      </nav>
-    </header>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Minseo Kim | CV</title>
+  <meta name="description" content="Minseo Kim CV and portfolio">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page">
+    <section class="hero" aria-labelledby="name">
+      <div>
+        <p class="eyebrow">Curriculum Vitae</p>
+        <h1 id="name">Minseo Kim</h1>
+        <p class="name-ko">김민서</p>
+        <p class="role">Undergraduate Researcher · Cybersecurity Simulation · Applied AI</p>
+      </div>
+      <address class="contact">
+        <a href="mailto:rla524747@gmail.com">rla524747@gmail.com</a>
+        <a href="https://github.com/minb-1124" target="_blank" rel="noreferrer">github.com/minb-1124</a>
+        <a href="https://smai405.github.io/smai-lab-homepage/" target="_blank" rel="noreferrer">SMAI Lab</a>
+        <span>Cheonan, Korea</span>
+      </address>
+    </section>
 
-    <main id="top">
-      <section class="hero" aria-labelledby="hero-title">
-        <div class="hero-copy">
-          <p class="eyebrow">Semantic reward curve for NASim paths</p>
-          <h1 id="hero-title">
-            <span>Completion</span>
-            <span>Sense</span>
-            <span>Benchmark</span>
-          </h1>
-          <p class="hero-text">
-            네트워크 공격 시뮬레이션의 관측 기록을 자연어로 풀어내고, 의미 공간에서 목표 완료감이 어떻게 쌓이는지 측정합니다.
-          </p>
-          <div class="hero-actions">
-            <a class="button primary" href="#run">실행하기</a>
-            <a class="button secondary" href="#method">방법 보기</a>
+    <section class="section">
+      <h2>Profile</h2>
+      <p>
+        상명대학교 SMAI Lab 학부연구생으로, 사이버보안 시뮬레이션과 응용 AI를 중심으로
+        연구하고 있습니다. 강화학습, 딥러닝, 시뮬레이션 기반 지능형 시스템 구현에 관심이
+        있으며 Python, C++, Git 기반 개발 경험을 쌓고 있습니다.
+      </p>
+    </section>
+
+    <section class="section grid">
+      <div>
+        <h2>Education</h2>
+        <article class="item">
+          <div class="item-head">
+            <h3>Sangmyung University</h3>
+            <span>2022 - Present</span>
           </div>
-        </div>
+          <p>Undergraduate student. Department information can be added here.</p>
+        </article>
+      </div>
 
-        <figure class="visual-panel" aria-label="관측 경로와 보상 곡선 시각화">
-          <canvas id="pathCanvas" width="920" height="640"></canvas>
-          <figcaption>
-            <strong>Observation path</strong>
-            <span>semantic distance narrows as completion grows</span>
-          </figcaption>
-        </figure>
-      </section>
+      <div>
+        <h2>Skills</h2>
+        <ul class="tags">
+          <li>C++</li>
+          <li>Python</li>
+          <li>Deep Learning</li>
+          <li>Reinforcement Learning</li>
+          <li>Cybersecurity Simulation</li>
+          <li>Applied AI</li>
+          <li>Git</li>
+          <li>Linux</li>
+        </ul>
+      </div>
+    </section>
 
-      <section class="metrics" aria-label="프로젝트 요약 지표">
-        <div>
-          <strong>NASim</strong>
-          <span>optimal-path observations</span>
+    <section class="section">
+      <h2>Projects</h2>
+      <article class="item">
+        <div class="item-head">
+          <h3>
+            <a href="https://github.com/minb-1124/ros2_fire_detection_project" target="_blank" rel="noreferrer">
+              ROS2-Based Smoke Detection and Control System
+            </a>
+          </h3>
+          <span>2024.08</span>
         </div>
-        <div>
-          <strong>Text</strong>
-          <span>state-to-language encoding</span>
+        <p>
+          ROS2 기반 CCTV 연기 감지 관제 시스템. OpenCV와 TensorFlow를 활용해 연기를 감지하고,
+          tkinter GUI에서 실시간 알림, Reset 서비스, 감지 로그 기록 기능을 구현했습니다.
+        </p>
+      </article>
+      <article class="item">
+        <div class="item-head">
+          <h3>
+            <a href="https://github.com/minb-1124/agentic_cartpole_risk" target="_blank" rel="noreferrer">
+              Agentic CartPole Risk
+            </a>
+          </h3>
+          <span>2024.09</span>
         </div>
-        <div>
-          <strong>Curve</strong>
-          <span>completion-sense reward</span>
+        <p>
+          CartPole 환경을 기반으로 에이전트의 의사결정과 위험 요소를 분석하는 강화학습 프로젝트.
+          실험 환경을 구성하고 에이전트 성능과 위험 지표를 관찰할 수 있도록 구현했습니다.
+        </p>
+      </article>
+      <article class="item">
+        <div class="item-head">
+          <h3>Image Texture-Based Sensing Data Anomaly Detection</h3>
+          <span>2025</span>
         </div>
-      </section>
+        <p>
+          이미지 텍스처 특징을 활용한 센싱 데이터 이상탐지 연구.
+          2025 한국통신학회 인공지능 학술대회 학부 논문 경진대회 우수논문상 수상.
+        </p>
+      </article>
+      <article class="item">
+        <div class="item-head">
+          <h3>Cybersecurity Simulation and Applied AI</h3>
+          <span>Present</span>
+        </div>
+        <p>
+          SMAI Lab에서 사이버보안 시뮬레이션과 응용 AI를 주제로 학습 및 연구를 진행하고 있습니다.
+        </p>
+      </article>
+    </section>
 
-      <section class="content-band" id="method">
-        <div class="section-heading">
-          <p class="eyebrow">Method</p>
-          <h2>관측을 의미로 바꾸는 간단한 파이프라인</h2>
+    <section class="section">
+      <h2>Experience</h2>
+      <article class="item">
+        <div class="item-head">
+          <h3>SMAI Lab, Sangmyung University</h3>
+          <span>Present</span>
         </div>
-        <div class="method-grid">
-          <article>
-            <span>01</span>
-            <h3>Observe</h3>
-            <p>NASim 경로의 상태 변화를 읽고, 각 단계에서 드러나는 호스트와 권한 정보를 정리합니다.</p>
-          </article>
-          <article>
-            <span>02</span>
-            <h3>Describe</h3>
-            <p>구조화된 관측값을 사람이 읽을 수 있는 문장으로 변환해 의미 인코더가 다룰 수 있게 만듭니다.</p>
-          </article>
-          <article>
-            <span>03</span>
-            <h3>Evaluate</h3>
-            <p>목표 문장과의 의미적 가까움을 따라 reward curve를 만들고 완료감의 증가를 추적합니다.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="split-section" id="results">
-        <div>
-          <p class="eyebrow">Results</p>
-          <h2>완료에 가까워지는 느낌을 숫자로 확인합니다</h2>
-          <p>
-            이 벤치마크는 경로가 목표 상태에 가까워질수록 의미 보상이 어떻게 변하는지 확인하는 데 초점을 둡니다.
-            실험 출력은 <code>logs/</code>에 저장되며, 이후 곡선 비교나 모델별 감도 분석으로 확장할 수 있습니다.
-          </p>
-        </div>
-        <div class="curve-card" aria-label="보상 곡선 예시">
-          <div class="curve-row">
-            <span>start</span>
-            <meter min="0" max="100" value="22">22%</meter>
-          </div>
-          <div class="curve-row">
-            <span>pivot</span>
-            <meter min="0" max="100" value="58">58%</meter>
-          </div>
-          <div class="curve-row">
-            <span>goal</span>
-            <meter min="0" max="100" value="91">91%</meter>
-          </div>
-        </div>
-      </section>
-
-      <section class="content-band run-band" id="run">
-        <div class="section-heading">
-          <p class="eyebrow">Run</p>
-          <h2>로컬에서 벤치마크 실행</h2>
-        </div>
-        <pre><code>python3 -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-python3 scripts/completion_sense_benchmark.py</code></pre>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <span>minseo.github.io</span>
-      <a href="#top">Back to top</a>
-    </footer>
-
-    <script src="script.js"></script>
-  </body>
+        <p>Undergraduate Researcher · Student Lab, Hakmugwan 405</p>
+      </article>
+    </section>
+  </main>
+</body>
 </html>
