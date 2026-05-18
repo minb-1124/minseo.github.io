@@ -92,6 +92,13 @@ h3 {
   font-size: 1.05rem;
 }
 
+.name-ko {
+  margin-bottom: 10px;
+  color: var(--accent-ink);
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
 .contact {
   display: flex;
   flex-direction: column;
