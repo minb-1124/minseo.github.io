@@ -1,12 +1,12 @@
 :root {
   color-scheme: light;
-  --bg: #f7f5f0;
+  --bg: #faf8f7;
   --paper: #ffffff;
-  --text: #202124;
-  --muted: #686f77;
-  --line: #d9d6ce;
-  --accent: #1f6f78;
-  --accent-ink: #0f3f45;
+  --text: #242124;
+  --muted: #6f686c;
+  --line: #e2dcdf;
+  --accent: #b76b82;
+  --accent-ink: #7a3f52;
 }
 
 * {
@@ -42,7 +42,7 @@ a {
   justify-content: space-between;
   gap: 32px;
   padding-bottom: 32px;
-  border-bottom: 2px solid var(--text);
+  border-bottom: 2px solid #d8b6c2;
 }
 
 .eyebrow {
@@ -90,13 +90,6 @@ h3 {
   margin-bottom: 0;
   color: var(--muted);
   font-size: 1.05rem;
-}
-
-.name-ko {
-  margin-bottom: 10px;
-  color: var(--accent-ink);
-  font-size: 1.2rem;
-  font-weight: 700;
 }
 
 .contact {
@@ -160,7 +153,7 @@ h3 {
   padding: 6px 10px;
   border: 1px solid var(--line);
   border-radius: 6px;
-  background: #fbfaf7;
+  background: #fdfafa;
   color: var(--accent-ink);
   font-size: 0.92rem;
 }
